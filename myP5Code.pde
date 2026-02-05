@@ -40,39 +40,40 @@ void setup(){
 //🟢Draw Function - Runs on Repeat
 draw = function(){  
   
-  
-  if(mousePressed){
-    showXYPositions();
-  }
-
   //🎯New Text Code Should Go Here 🡻
 
 if(mousePressed){
 //boulder
 fill(111,111,111)
-ellipse(mouseX,mouseY,50,50)
+stroke(111,111,111)
+ellipse(mouseX,mouseY,111,111)
 }
 
 //crazy mountain
 if(mousePressed){
   fill(224, 167, 34)
-  text("MOUNTAIN", random(560,600), random(155,170));
-  text("MOUNTAIN", random(520,600), random(170,185));
-  text("MOUNTAIN", random(480,600), random(185,200));
-  text("MOUNTAIN", random(440,600), random(200,215));
-  text("MOUNTAIN", random(400,600), random(215,230));
-  text("MOUNTAIN", random(360,600), random(230,245));
-  text("MOUNTAIN", random(320,600), random(245,260));
-  text("MOUNTAIN", random(280,600), random(260,275));
-  text("MOUNTAIN", random(240,600), random(275,290));
-  text("MOUNTAIN", random(200,600), random(290,305));
-  text("MOUNTAIN", random(160,600), random(305,320));
-  text("MOUNTAIN", random(120,600), random(320,335));
-  text("MOUNTAIN", random(80,600), random(335,350));
-  text("MOUNTAIN", random(40,600), random(350,365));
-  text("MOUNTAIN", random(0,600), random(365,400));
+  text("MOUNTAIN", random(0,600), random(0,400));
 }
 
+//overlay
+if(mousePressed){
+  stroke(255,255,255)
+  fill(255,255,255)
+  beginShape();
+  vertex(600,140)
+  vertex(0,370)
+  vertex(0,0)
+  vertex(600,0)
+  endShape(); 
+
+  textSize(20); 
+  fill(0,0,0);
+  text("YOU ARE SISYPHUS", 40, 40);
+  textSize(15);
+  fill(0,0,0);
+  text("YOU MUST USE YOUR BOULDER TO COVER UP THE MOUNTAIN", 40, 60);
+  text("CLICK AND HOLD TO START", 40, 80);
+}
 
 };
 
